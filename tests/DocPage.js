@@ -303,7 +303,9 @@ class DocLibrary {
             fontSize: '3.5rem',
             background: 'linear-gradient(to right, #8360c3, #2ebf91)',
             padding: '1rem',
-            borderRadius: '15px 15px 0 0'
+            borderRadius: '15px 15px 0 0',
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
         })
         this.setStyle(this.DOMElements.index, { // --- .index
             padding: '1rem',
@@ -388,8 +390,8 @@ class DocLibrary {
                     { fontSize: '1.2rem' }
                 ],
                 [
-                    this.DOMElements.title,
-                    { borderRadius: '0' }
+                    this.DOMElements.title, // --- Before
+                    { borderRadius: '0'}
                 ]
             ],
             tablets: [
@@ -403,13 +405,13 @@ class DocLibrary {
                 ],
                 [
                     this.DOMElements.title, // --- Before
-                    { borderRadius: '0' }
+                    { borderRadius: '0'}
                 ]
             ],
             mobile: [
                 [
                     this.DOMElements.root,
-                    { fontSize: '0.2rem' }
+                    { fontSize: '0.8rem' }
                 ],
                 [
                     this.DOMElements.container, // --- Before
@@ -417,7 +419,7 @@ class DocLibrary {
                 ],
                 [
                     this.DOMElements.title, // --- Before
-                    { borderRadius: '0' }
+                    { borderRadius: '0'}
                 ]
             ]
         });
